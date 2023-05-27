@@ -5,13 +5,12 @@ export default async function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      Hooray. You&apos;ve been hacked! Just kidding.
       <div className="flex flex-col items-center justify-center">
+        <h1 className="text-4xl font-bold">Products</h1>
         {products.length === 0 ? (
-          <h1 className="text-4xl font-bold">No products found</h1>
+          <span className="text-gray-500">No products found</span>
         ) : (
           <>
-            <h1 className="text-4xl font-bold">Products</h1>
             <ul className="mt-8">
               {products.map((product) => (
                 <li key={product.id}>{product.name}</li>
